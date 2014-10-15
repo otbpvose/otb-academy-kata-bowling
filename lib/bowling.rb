@@ -1,0 +1,3 @@
+class BowlingLineScorer
+
+end

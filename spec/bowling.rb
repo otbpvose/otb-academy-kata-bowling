@@ -1,7 +1,7 @@
 require 'bowling'
 
 RSpec.describe "A game of bowling" do
-  let(:game) { BowlingGame.new }
+  let(:game) { BowlingLineScorer.new }
 
   it "calculates the correct score for a simple ten frame game" do
     expect(game.score([3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3]).to eq( 60 )
