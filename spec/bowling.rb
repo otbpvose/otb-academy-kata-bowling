@@ -17,4 +17,15 @@ RSpec.describe "A game of bowling" do
     expect(game.score([3, 3], [3, 3], [3, 3], [10], [10], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3]).to eq( 87 )
   end
 
+  it "calculates a game with a spare in the last frame" do
+    expect(game.score([3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 7, 6]).to eq( 76 )
+    expect(game.score([3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 7, 10]).to eq( 84 )
+  end
+
+  it "calculates a game with a strike in the last frame" do
+    expect(game.score([3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [10, 3, 6]).to eq( 82 )
+    expect(game.score([3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [10, 10, 6]).to eq( 96 )
+    expect(game.score([3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [10, 10, 10]).to eq( 114 )
+  end
+
 end
