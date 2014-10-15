@@ -13,26 +13,31 @@ RSpec.describe "A game of bowling" do
   end
 
   it "calculates a game with a strike in it" do
+    skip
     expect(game.score([ [3, 3], [3, 3], [3, 3], [10], [6, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3] ])).to eq( 76 )
     expect(game.score([ [3, 3], [3, 3], [3, 3], [10], [10], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3] ])).to eq( 87 )
   end
 
   it "calculates a game with a spare in the last frame" do
+    skip
     expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 7, 6] ])).to eq( 76 )
     expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 7, 10] ])).to eq( 84 )
   end
 
   it "calculates a game with a strike in the last frame" do
+    skip
     expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [10, 3, 6] ])).to eq( 82 )
     expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [10, 6, 4] ])).to eq( 84 )
     expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [10, 10, 10] ])).to eq( 80 )
   end
 
   it "calculates the correct score for a complicated ten frame game" do
+    skip
     expect(game.score([ [6, 1], [7, 3], [2, 6], [9, 0], [10], [10], [3, 7], [9, 1], [0, 4], [10, 3, 6] ])).to eq( 140 )
   end
 
   it "calculates the correct score for a perfect game" do
+    skip
     expect(game.score([ [10], [10], [10], [10], [10], [10], [10], [10], [10], [10, 10, 10] ])).to eq( 300 )
   end
 
