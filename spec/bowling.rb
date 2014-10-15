@@ -25,7 +25,7 @@ RSpec.describe "A game of bowling" do
   it "calculates a game with a strike in the last frame" do
     expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [10, 3, 6] ]).to eq( 82 )
     expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [10, 6, 4] ]).to eq( 84 )
-    expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [10, 10] ]).to eq( 80 )
+    expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [10, 10, 10] ]).to eq( 80 )
   end
 
   it "calculates the correct score for a complicated ten frame game" do
@@ -33,7 +33,7 @@ RSpec.describe "A game of bowling" do
   end
 
   it "calculates the correct score for a perfect game" do
-    expect(game.score([ [10], [10], [10], [10], [10], [10], [10], [10], [10], [10, 10] ]).to eq( 300 )
+    expect(game.score([ [10], [10], [10], [10], [10], [10], [10], [10], [10], [10, 10, 10] ]).to eq( 300 )
   end
 
 end
