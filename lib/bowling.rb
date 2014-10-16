@@ -31,7 +31,7 @@ class BowlingLineScorer
     spares.each do |frame|
       if frame < 9
         score += line[frame + 1].first
-      else
+      elsif line[frame].first != 10
         score += line[frame].last
       end
     end
@@ -43,11 +43,13 @@ class BowlingLineScorer
     score = 0
 
     strikes.each do |frame|
-      if line[frame + 1].length == 1
-        score += line[frame + 1].first
-        score += line[frame + 2].first
-      else
-        score += line[frame + 1].reduce(:+)
+      if frame < 9
+        if line[frame + 1].length == 1
+          score += line[frame + 1].first
+          score += line[frame + 2].first
+        else
+          score += line[frame + 1].reduce(:+)
+        end
       end
     end
 
