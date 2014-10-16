@@ -8,7 +8,7 @@ class BowlingLineScorer
       num_of_throws = frame.length
       frame_score = frame.reduce(:+)
 
-      if frame_score == 10 && num_of_throws > 1
+      if frame_score >= 10 && num_of_throws > 1
         spares << i
       end
 
@@ -29,7 +29,11 @@ class BowlingLineScorer
     score = 0
 
     spares.each do |frame|
-      score += line[frame + 1].first
+      if frame < 9
+        score += line[frame + 1].first
+      else
+        score += line[frame].last
+      end
     end
 
     return score

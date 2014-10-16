@@ -19,7 +19,6 @@ RSpec.describe "A game of bowling" do
   end
 
   it "calculates a game with a spare in the last frame" do
-    skip
     expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 7, 6] ])).to eq( 76 )
     expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 7, 10] ])).to eq( 84 )
   end
