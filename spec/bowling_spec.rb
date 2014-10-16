@@ -10,9 +10,11 @@ RSpec.describe "A game of bowling" do
 
   it "calculates a game with a spare in it" do
     expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 7], [6, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3] ])).to eq( 73 )
+    expect(game.score([ [3, 3], [3, 3], [3, 3], [3, 7], [6, 3], [3, 3], [3, 7], [3, 3], [3, 3], [3, 3] ])).to eq( 80 )
   end
 
   it "calculates a game with a strike in it" do
+    skip
     expect(game.score([ [3, 3], [3, 3], [3, 3], [10], [6, 3], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3] ])).to eq( 76 )
     expect(game.score([ [3, 3], [3, 3], [3, 3], [10], [10], [3, 3], [3, 3], [3, 3], [3, 3], [3, 3] ])).to eq( 87 )
   end
