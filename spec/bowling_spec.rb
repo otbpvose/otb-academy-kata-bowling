@@ -34,7 +34,6 @@ RSpec.describe "A game of bowling" do
   end
 
   it "calculates the correct score for a perfect game" do
-    skip
     expect(game.score([ [10], [10], [10], [10], [10], [10], [10], [10], [10], [10, 10, 10] ])).to eq( 300 )
   end
 

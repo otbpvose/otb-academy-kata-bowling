@@ -43,13 +43,17 @@ class BowlingLineScorer
     score = 0
 
     strikes.each do |frame|
-      if frame < 9
+      if frame < 8
         if line[frame + 1].length == 1
           score += line[frame + 1].first
           score += line[frame + 2].first
         else
           score += line[frame + 1].reduce(:+)
         end
+      elsif frame == 8
+        current_frame = line[frame + 1]
+        score += current_frame[0]
+        score += current_frame[1]
       end
     end
 
